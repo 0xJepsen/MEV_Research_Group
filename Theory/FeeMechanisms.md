@@ -12,15 +12,12 @@ C-Chain atomic transactions (i.e. imports and exports from/to other chains) char
 
 Gas Used:
 
-+---------------------+-------+
-| Item                : Gas   |
-+---------------------+-------+
-| Unsigned Tx Byte    : 1     |
-+---------------------+-------+
-| Signature           : 1000  |
-+---------------------+-------+
-| Per Atomic Tx       : 10000 |
-+---------------------+-------+
+| Item | Gas  | 
+| ----------- | ----------- |
+| Unsigned Tx Byte  | 1 |
+| Signature   | 1000 |
+| Per Atomic Tx   | 10000 | 
+
 Therefore, the gas used by an atomic transaction is 1 * len(unsignedTxBytes) + 1,000 * numSignatures + 10,000
 
 The tx fee additionally takes the base fee into account. Due to the fact that atomic transactions use units denominated in 9 decimal places, the base fee must be converted to 9 decimal places before calculating the actual fee paid by the transaction. Therefore, the actual fee is: gasUsed * baseFee (converted to 9 decimals).
@@ -28,3 +25,7 @@ The tx fee additionally takes the base fee into account. Due to the fact that at
 ## Polygon
 
 [Resource](https://docs.polygon.technology/docs/develop/eip1559-transactions/how-to-send-eip1559-transactions)
+
+## Solana
+
+[Resource](https://docs.solana.com/implemented-proposals/transaction-fees#congestion-driven-fees)
