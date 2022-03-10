@@ -1,3 +1,3 @@
 # MEV_Research_Group
 
-for FLashbots Research Preposal
+This repository is purely for research. There are no implementations of the findings in this repository. 
