@@ -1,0 +1,23 @@
+dependencies:
+# - <orginization/repo>@<version>
+dotenv: .env
+networks:
+  default: mainnet-fork
+  rinkeby:
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    verify: True
+  mainnet-fork:
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    uniswap: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984'
+    verify: False
+  development:
+    verify: False
+  ganache-local:
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY}
+payee:
+  pub1: ${P1},
+  pub2: ${P2},
+  pub3: ${P3},
+  pub4: ${P4}
