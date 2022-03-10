@@ -21,3 +21,4 @@ payee:
   pub2: ${P2},
   pub3: ${P3},
   pub4: ${P4}
+min_payout_in_eth: 1
